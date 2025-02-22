@@ -1,0 +1,454 @@
+/* Import Telugu Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap');
+
+/* CSS Variables for Consistent Styling (Upgraded Color Palette) */
+:root {
+    --primary-green: #1b5e20; /* Deeper, richer green */
+    --light-green: rgba(232, 245, 233, 0.8); /* Semi-transparent light green */
+    --transparent-green-light: rgba(232, 245, 233, 0.6); /* Lighter transparent green */
+    --accent-yellow: #f9a825; /* Warmer, vibrant yellow */
+    --dark-brown: #3e2723; /* Rich brown for text */
+    --text-green-dark: #2e7d32; /* Darker green for headings */
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease;
+}
+
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans Telugu', sans-serif;
+    background: linear-gradient(135deg, var(--light-green), #fff); /* Subtle diagonal gradient */
+    color: var(--dark-brown);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header and Navigation Styles */
+.navbar {
+    background: rgba(27, 94, 32, 0.9); /* Transparent green for navbar */
+    box-shadow: var(--shadow);
+    padding: 0rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--accent-yellow) !important;
+    transition: var(--transition);
+    padding-left: 5.2rem;
+}
+
+.navbar-brand:hover {
+    color: #fff !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.nav-link {
+    color: #fff !important;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    transition: var(--transition);
+    
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-yellow) !important;
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(249, 168, 37, 0.5);
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: var(--accent-yellow);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(62, 39, 35, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row; /* Ensure horizontal layout on desktop */
+}
+
+.navbar-nav .nav-item {
+    margin: 0 1rem; /* Add horizontal spacing between links */
+}
+
+/* Hero Section (About KrushiMitra) */
+#hero {
+    padding: 15rem 0 10rem; /* Increased height for prominence */
+    margin-top: 170px; /* Adjust for fixed navbar */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    background: rgba(255, 255, 255, 0.7); /* White transparent overlay */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-content {
+    text-align: center;
+    
+}
+
+.text-content h1 {
+    font-size: 2.8rem;
+    color: var(--text-green-dark);
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.text-content p {
+    font-size: 1.5rem;
+    color: var(--dark-brown);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    transition: var(--transition);
+    width: auto; /* Ensure button doesn’t elongate */
+    display: inline-block; /* Maintain inline behavior */
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-yellow);
+    border-color: var(--accent-yellow);
+    color: var(--dark-brown);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Farming Overview Section */
+#farming-overview {
+    padding: 4rem 0;
+    background: var(--transparent-green-light);
+}
+
+#farming-overview h2 {
+    font-size: 2.5rem;
+    color: var(--text-green-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#farming-overview p {
+    font-size: 1.2rem;
+    color: var(--dark-brown);
+    line-height: 1.8;
+}
+
+/* Features Section */
+#features {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.9); /* Slight white overlay for contrast */
+}
+
+#features h2 {
+    font-size: 2.5rem;
+    color: var(--text-green-dark);
+    margin-bottom: 2.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(240, 233, 233, 0.1);
+}
+
+.feature-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: var(--transparent-green-light);
+    transition: var(--transition);
+    height: 100%;
+    display:flexbox;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1rem; /* Add padding to balance background */
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+    padding: 1.5rem;
+    background: rgba(31, 39, 32, 0.18); /* Slight white overlay for readability */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0 0 15px 15px; /* Match card’s rounded corners */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color:rgba(255, 255, 253, 0.998);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 1.5rem;
+    color: rgba(243, 243, 243, 0.998);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.btn-fixed {
+    width:max-content; /* Ensure button doesn’t elongate */
+    padding: 0.6rem 1.5rem; /* Fixed padding for consistent size */
+    font-size: 1rem; /* Consistent font size */
+    display: inline-block; /* Maintain inline behavior */
+    margin-top: auto; /* Push button to bottom of card */
+    background-color: #f9a825;
+}
+
+/* Additional Content Section */
+#additional-content {
+    padding: 4rem 0;
+    background: var(--transparent-green-light);
+}
+
+#additional-content h2 {
+    font-size: 2.5rem;
+    color: var(--text-green-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#additional-content p {
+    font-size: 1.2rem;
+    color: var(--dark-brown);
+    line-height: 1.8;
+}
+
+#additional-content ul {
+    list-style: none;
+    margin-left: 1rem;
+}
+
+#additional-content li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+#additional-content li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--primary-green);
+    border-radius: 50%;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-green);
+    color: #fff;
+    padding: 2rem 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+footer a {
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+footer a:hover {
+    color: var(--accent-yellow);
+}
+
+/* Bloom Scroll Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 90%;
+    }
+    .row {
+        gap: 1.5rem;
+    }
+    .text-content h1 {
+        font-size: 2.5rem;
+    }
+    .text-content p {
+        font-size: 1.2rem;
+    }
+    #farming-overview p, #additional-content p, #additional-content li {
+        font-size: 1.1rem;
+    }
+    .feature-card {
+        background-size: contain; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1.6rem;
+    }
+    .nav-link {
+        font-size: 1.1rem;
+        margin: 0 0.8rem; /* Adjust horizontal spacing on smaller screens */
+    }
+    .text-content h1 {
+        font-size: 2.2rem;
+    }
+    .text-content p {
+        font-size: 1.1rem;
+    }
+    #features h2, #farming-overview h2, #additional-content h2 {
+        font-size: 2rem;
+    }
+    .card-title {
+        font-size: 1.3rem;
+    }
+    .card-text {
+        font-size: 1rem;
+    }
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .overlay {
+        padding: 1.5rem;
+    }
+    .feature-card {
+        background-size: contain; /* Adjust for tablets */
+    }
+    .navbar-nav {
+        flex-direction: column; /* Stack vertically on tablets */
+    }
+    .navbar-nav .nav-item {
+        margin: 0.5rem 0; /* Vertical spacing for mobile */
+    }
+    .btn-fixed {
+        padding: 0.5rem 1.2rem; /* Slightly smaller on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    #hero, #features, #farming-overview, #additional-content {
+        padding: 3rem 0;
+    }
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+    .nav-link {
+        font-size: 1rem;
+        margin: 0 0.5rem; /* Adjust spacing on mobile */
+    }
+    .text-content h1 {
+        font-size: 1.8rem;
+    }
+    .text-content p {
+        font-size: 1rem;
+    }
+    .btn-primary, .btn-fixed {
+        padding: 0.5rem 1.2rem;
+        font-size: 1rem;
+    }
+    #features h2, #farming-overview h2, #additional-content h2 {
+        font-size: 1.8rem;
+    }
+    .card-title {
+        font-size: 1.2rem;
+    }
+    .card-text {
+        font-size: 0.9rem;
+    }
+    #farming-overview p, #additional-content p, #additional-content li {
+        font-size: 1rem;
+    }
+    .feature-card {
+        background-size: contain; /* Adjust for mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .nav-link {
+        font-size: 0.9rem;
+        margin: 0 0.3rem; /* Tighten spacing on very small screens */
+    }
+    .text-content h1 {
+        font-size: 1.5rem;
+    }
+    .text-content p {
+        font-size: 0.9rem;
+    }
+    .btn-primary, .btn-fixed {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+    #features h2, #farming-overview h2, #additional-content h2 {
+        font-size: 1.5rem;
+    }
+    .card-title {
+        font-size: 1.1rem;
+    }
+    .card-text {
+        font-size: 0.8rem;
+    }
+    #farming-overview p, #additional-content p, #additional-content li {
+        font-size: 0.9rem;
+    }
+    .feature-card {
+        background-size: contain; /* Adjust for very small screens */
+    }
+}

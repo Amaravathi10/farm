@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>లక్షణం 1 - NPK నుండి పంటలు - కృషిమిత్ర</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">కృషిమిత్ర</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">మొదటి పేజీ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Feature1.html">లక్షణం 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Feature2.html">లక్షణం 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Feature3.html">లక్షణం 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Feature Section -->
+    <section id="feature-about" class="py-5 animate-on-scroll">
+        <div class="container">
+            <h1>NPK నుండి పంటలు</h1>
+            <p>మీ మట్టిలోని NPK విలువలను నమోదు చేయండి మరియు సిఫార్సు చేసిన పంటలు మరియు సర్దుబాటు సూచనలను పొందండి.</p>
+            <img src="images/feature1-image.jpg" alt="లక్షణం 1 చిత్రం" class="img-fluid rounded">
+        </div>
+    </section>
+
+    <!-- Try Feature Section -->
+    <section id="try-feature" class="py-5 bg-light animate-on-scroll">
+        <div class="container">
+            <h2>లక్షణాన్ని ప్రయత్నించండి</h2>
+            <form id="feature1-form">
+                <div class="mb-3">
+                    <label for="N" class="form-label">నత్రజని (N)</label>
+                    <input type="number" class="form-control" id="N" required min="0">
+                </div>
+                <div class="mb-3">
+                    <label for="P" class="form-label">ఫాస్ఫరస్ (P)</label>
+                    <input type="number" class="form-control" id="P" required min="0">
+                </div>
+                <div class="mb-3">
+                    <label for="K" class="form-label">పొటాషియం (K)</label>
+                    <input type="number" class="form-control" id="K" required min="0">
+                </div>
+                <button type="submit" class="btn btn-primary">సమర్పించు</button>
+            </form>
+            <div id="result" class="mt-4"></div>
+        </div>
+    </section>
+
+    <footer class="py-3 bg-dark text-white text-center">
+        <p>&copy; 2023 కృషిమిత్ర</p>
+    </footer>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
